@@ -3,4 +3,445 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="flat_bluewood">#34495E</color>
+    <color name="flat_hoki">#67809F</color>
+    <color name="flat_picten_blue">#59ABE3</color>
+    <color name="flat_san_marino">#446CB3</color>
+    <color name="flat_jelly_bean">#2574A9</color>
+    <color name="flat_curious_blue">#3498DB</color>
+    <color name="flat_dodger_blue">#19B5FE</color>
+    <color name="flat_royal_blue">#4183D7</color>
+    <color name="flat_malibu">#6BB9F0</color>
+    <color name="flat_humming_bird">#C5EFF7</color>
+    <color name="flat_madison">#2C3E50</color>
+    <color name="flat_ebony_clay">#22313F</color>
+    <color name="flat_blue">#0b1c64</color>
+    <color name="flat_summer_sky">#1E8BC3</color>
+    <color name="flat_fountain_blue">#5C97BF</color>
+    <color name="flat_shakespare">#52B3D9</color>
+    <color name="flat_ming">#336E7B</color>
+    <color name="flat_light_sea_green">#1BA39C</color>
+    <color name="flat_silver_tree">#68C3A3</color>
+    <color name="flat_niagara">#16A085</color>
+    <color name="flat_green_haze">#019875</color>
+    <color name="flat_observatory">#049372</color>
+    <color name="flat_salem">#1E824C</color>
+    <color name="flat_downy">#65C6BB</color>
+    <color name="flat_downy1">#106B60</color>
+    <color name="flat_sea_buckthorn">#EB974E</color>
+    <color name="flat_fire_bush">#EB9532</color>
+    <color name="flat_tahiti_gold">#E87E04</color>
+    <color name="flat_casablanca">#F4B350</color>
+    <color name="flat_lightning_yellow">#F5AB35</color>
+    <color name="flat_confetti">#E9D460</color>
+    <color name="flat_zest">#E67E22</color>
+    <color name="flat_white_smoke">#ECECEC</color>
+    <color name="flat_lynch">#6C7A89</color>
+    <color name="flat_pumice">#D2D7D3</color>
+    <color name="flat_gellery">#EEEEEE</color>
+    <color name="flat_silver_sand">#BDC3C7</color>
+    <color name="flat_porcelain">#ECF0F1</color>
+    <color name="flat_cascade">#95A5A6</color>
+    <color name="flat_iron">#DADFE1</color>
+    <color name="flat_edward">#ABB7B7</color>
+    <color name="flat_cararra">#F2F1EF</color>
+    <color name="flat_silver">#F2F1EF</color>
+    <color name="flat_alice_blue">#E4F1FE</color>
+    <color name="flat_honey_flower">#674172</color>
+    <color name="flat_light_wisteria">#BE90D4</color>
+    <color name="flat_wisteria">#9B59B6</color>
+    <color name="flat_plum">#913D88</color>
+    <color name="flat_rebecca_purple">#663399</color>
+    <color name="flat_tone_purple1">#897FBA</color>
+    <color name="flat_tone_purple2">#7E3661</color>
+    <color name="flat_tone_purple3">#B0A4BE</color>
+    <color name="flat_tone_purple4">#a2228f</color>
+    <color name="flat_wistful">#AEA8D3</color>
+    <color name="flat_wistful2">#DED7E6</color>
+    <color name="flat_wistful3">#beafd8</color>
+    <color name="flat_chestnut">#D24D57</color>
+    <color name="flat_oldbrick">#96281B</color>
+    <color name="flat_valencia">#D64541</color>
+    <color name="flat_sunglo">#E26A6A</color>
+    <color name="flat_tone_red">#8A2D3C</color>
+    <color name="flat_tall_poppy">#C0392B</color>
+    <color name="flat_grey">#888888</color>
+    <color name="flat_dark_grey">#344146</color>
+    <color name="flat_tone_grey">#65878F</color>
+    <color name="flat_dark_green">#249991</color>
+    <color name="flat_tone_blue">#59A9C2</color>
+    <color name="flat_tone_green1">#1F9EA3</color>
+    <color name="flat_tone_green2">#3B7E87</color>
+    <color name="flat_tone_green3">#00B5B5</color>
+    <color name="flat_tone_green4">#5C9F97</color>
+    <color name="flat_tone_green5">#6797A1</color>
+    <color name="flat_tone_green6">#106B60</color>
+    <color name="flat_tone_green7">#007B70</color>
+    <color name="flat_tone_green8">#009B90</color>
+    <color name="flat_tone_grey1">#1C2A39</color>
+    <color name="flat_tone_grey2">#2C3A49</color>
+    <color name="flat_tone_grey3">#3C4A59</color>
+    <color name="flat_tone_grey4">#4C5A69</color>
+    <color name="flat_tone_grey5">#ACBAC9</color>
+    <color name="flat_tone_grey6">#BCCAD9</color>
+
+    <color name="flat_green1">#5EFAF7</color>
+    <color name="flat_green2">#51F5EA</color>
+    <color name="flat_green3">#47EBE0</color>
+    <color name="flat_green4">#37DBD0</color>
+    <color name="flat_green5">#27CBC0</color>
+    <color name="flat_green6">#17BBB0</color>
+    <color name="flat_green7">#07ABA0</color>
+    <color name="flat_green8">#009B90</color>
+    <color name="flat_green9">#008B80</color>
+    <color name="flat_green10">#007B70</color>
+    <color name="flat_green11">#106B60</color>
+    <color name="flat_green12">#005B50</color>
+
+    <color name="flat_my_green1">#316572</color>
+    <color name="flat_my_green2">#1b5561</color>
+    <color name="flat_my_green3">#14acaf</color>
+
+    <color name="flat_my_darkgrey">#3a3f4d</color>
+    <color name="flat_my_darkgrey1">#272c32</color>
+    <color name="flat_my_darkgrey2">#4f5a67</color>
+    <color name="flat_my_darkgrey3">#2c395b</color>
+    <color name="flat_my_lightblue1">#5e98fc</color>
+    <color name="flat_my_lightblue2">#6fa7f4</color>
+    <color name="flat_my_darkorange1">#f84e14</color>
+    <color name="flat_my_darkorange2">#ff8a01</color>
+    <color name="flat_my_lightorange1">#f1b136</color>
+    <color name="flat_my_lightorange2">#ffd201</color>
+    <color name="flat_my_lightred">#ef6363</color>
+    <color name="flat_my_lightgreen">#13b0a5</color>
+
+    <color name="flat_my_darkpurple">#885f7f</color>
+    <color name="flat_my_darkpurple1">#995f7f</color>
+    <color name="flat_my_darkpurple2">#5b2d49</color>
+    <color name="flat_my_darkpurple3">#472445</color>
+    <color name="flat_my_darkpurple4">#b0606d</color>
+
+    <color name="flat_my_bej">#d68278</color>
+    <color name="flat_my_bej1">#ffab89</color>
+    <color name="flat_my_bej2">#fe8953</color>
+    <color name="flat_my_bej3">#ff6a52</color>
+    <color name="flat_my_yellow">#ffc150</color>
+
+    <color name="flat_my_blue1">#4d88c6</color>
+    <color name="flat_my_blue2">#457ab1</color>
+
+    <color name="flat_my_lightturquise">#ceebfb</color>
+    <color name="flat_my_blue3">#1395b5</color>
+    <color name="flat_my_turquise">#14dac9</color>
+    <color name="flat_my_yellowgreen">#d7e643</color>
+    <color name="flat_my_dark">#181820</color>
+    <color name="flat_my_dark_1">#50181820</color>
+    <color name="flat_my_dark1">#232d3b</color>
+    <color name="flat_my_dark2">#30373f</color>
+    <color name="flat_my_dark3">#272530</color>
+    <color name="flat_my_dark4">#2b3044</color>
+
+    <color name="flat_my_dark5">#22243d</color>
+    <color name="flat_my_dark6">#373b61</color>
+    <color name="flat_my_dark_green2">#2a4f57</color>
+    <color name="flat_my_light_green">#4bd4aa</color>
+    <color name="flat_my_light_pink">#ea4c5b</color>
+    <color name="flat_my_light_pink1">#ff4222</color>
+    <color name="flat_my_light_grey">#f5f7ff</color>
+    <color name="flat_my_light_purple">#777896</color>
+
+    <color name="flat_my_blue_green">#2cebe3</color>
+    <color name="flat_my_blue_green1">#30b3e9</color>
+    <color name="flat_my_blue_green2">#00e9cf</color>
+    <color name="flat_my_blue_green3">#71e1f2</color>
+    <color name="flat_my_blue_green4">#3cc1e2</color>
+    <color name="flat_my_blue_green5">#3d94e1</color>
+    <color name="flat_my_blue_green6">#3b74dd</color>
+    <color name="flat_my_dark_purp">#373447</color>
+    <color name="flat_my_light_purp">#dad6ed</color>
+    <color name="flat_my_dark_orange">#d84502</color>
+    <color name="flat_my_dark_blue">#18405f</color>
+    <color name="flat_my_dark_green">#1e868b</color>
+    <color name="flat_my_dark_green1">#43c28e</color>
+    <color name="flat_my_elep1">#d8dedc</color>
+    <color name="flat_my_elep2">#e1e7e7</color>
+
+    <color name="flat_my_mist">#90AFC5</color>
+    <color name="flat_my_stone">#336B87</color>
+    <color name="flat_my_darking">#2A3132</color>
+    <color name="flat_my_autumn">#763626</color>
+
+    <color name="flat_my_blue_black">#021C1E</color>
+    <color name="flat_my_cadet_blue">#004445</color>
+    <color name="flat_my_rain">#2C7873</color>
+    <color name="flat_my_greenery">#6FB98F</color>
+
+    <color name="flat_my_sky">#375E97</color>
+    <color name="flat_my_sunset">#FB6542</color>
+    <color name="flat_my_sun_flower">#FFBB00</color>
+    <color name="flat_my_grass">#3F681C</color>
+
+    <color name="flat_my_blue_pine">#324851</color>
+    <color name="flat_my_new_grass">#86AC41</color>
+    <color name="flat_my_reflection">#34675C</color>
+    <color name="flat_my_mist1">#7DA3A1</color>
+
+    <color name="flat_my_blue_sky">#4CB5F5</color>
+    <color name="flat_my_granite">#B7B8B6</color>
+    <color name="flat_my_pine">#34675C</color>
+    <color name="flat_my_fields">#B3C100</color>
+
+    <color name="flat_my_sand_stone">#F4CC70</color>
+    <color name="flat_my_burnt_orange">#DE7A22</color>
+    <color name="flat_my_sea">#20948B</color>
+    <color name="flat_my_lagoon">#6AB187</color>
+
+    <color name="flat_my_overcast">#F1F2F2</color>
+    <color name="flat_my_warm_gray">#BCBABE</color>
+    <color name="flat_my_ice">#A1D6E2</color>
+    <color name="flat_my_glacier_blue">#1995AD</color>
+
+    <color name="flat_my_deep_aqua">#003B46</color>
+    <color name="flat_my_ocean">#07575B</color>
+    <color name="flat_my_wave">#66A5AD</color>
+    <color name="flat_my_sea_foam">#C4DFE6</color>
+
+    <color name="flat_my_dark_navy">#011A27</color>
+    <color name="flat_my_blue_berry">#063852</color>
+    <color name="flat_my_tangerine">#F0810F</color>
+    <color name="flat_my_daffodil">#E6DF44</color>
+
+    <color name="flat_my_navy">#00293C</color>
+    <color name="flat_my_peacock_blue">#1E656D</color>
+    <color name="flat_my_ivory">#F1F3CE</color>
+    <color name="flat_my_candy_apple">#F62A00</color>
+
+    <color name="flat_my_midnight_blue">#1E1F26</color>
+    <color name="flat_my_indigo_ink">#283655</color>
+    <color name="flat_my_blueberry">#4D648D</color>
+    <color name="flat_my_periwinkle">#D0E1F9</color>
+
+    <color name="flat_my_grecian_blue">#2988BC</color>
+    <color name="flat_my_gr_sea">#2F496E</color>
+    <color name="flat_my_plaster">#F4EADE</color>
+    <color name="flat_my_coral">#ED8C72</color>
+
+    <color name="flat_my_ink">#20232A</color>
+    <color name="flat_my_aluminum">#ACBEBE</color>
+    <color name="flat_my_paper">#F4F4EF</color>
+    <color name="flat_my_ruby_red">#A01D26</color>
+
+    <color name="flat_my_medium_grey">#BBC3C6</color>
+    <color name="flat_my_matte_black">#1E1E20</color>
+    <color name="flat_my_brick_red">#962715</color>
+
+    <color name="flat_my_gothic_grey">#6C6B74</color>
+    <color name="flat_my_gothic_dark_ink">#2E303E</color>
+    <color name="flat_my_gothic_shad_purp">#9192BE</color>
+    <color name="flat_my_gothic_dark_purp">#54678F</color>
+    <color name="flat_my_gothic_dark">#212624</color>
+
+    <color name="flat_my_darkpurple5">#352853</color>
+    <color name="flat_my_turquise1">#63d4c2</color>
+    <color name="flat_my_pink1">#ff598f</color>
+
+    <color name="flat_orange1">#FDE3A7</color>
+    <color name="flat_orange2">#FFCF4B</color>
+    <color name="flat_orange3">#F9BF3B</color>
+    <color name="flat_orange4">#F9B32F</color>
+    <color name="flat_orange5">#F5AB35</color>
+    <color name="flat_orange6">#F39C12</color>
+    <color name="flat_orange7">#F1892D</color>
+    <color name="flat_orange8">#E67E22</color>
+    <color name="flat_orange9">#D87400</color>
+    <color name="flat_orange10">#C86400</color>
+    <color name="flat_orange11">#B85400</color>
+    <color name="flat_orange12">#A84410</color>
+
+    <color name="flat_purple1">#DCC6E0</color>
+    <color name="flat_purple2">#CEA0E4</color>
+    <color name="flat_purple3">#BE90D4</color>
+    <color name="flat_purple4">#AB69C6</color>
+    <color name="flat_purple5">#9B59B6</color>
+    <color name="flat_purple6">#8E44AD</color>
+    <color name="flat_purple7">#7E349D</color>
+    <color name="flat_purple8">#6E248D</color>
+    <color name="flat_purple9">#5E147D</color>
+    <color name="flat_purple10">#4E046D</color>
+    <color name="flat_purple11">#3E005D</color>
+    <color name="flat_purple12">#1E003D</color>
+
+
+    <color name="flat_red1">#FFCCBC</color>
+    <color name="flat_red2">#FFAC9C</color>
+    <color name="flat_red3">#FF8C7C</color>
+    <color name="flat_red4">#FF7C6C</color>
+    <color name="flat_red5">#FF6C5C</color>
+    <color name="flat_red6">#F75C4C</color>
+    <color name="flat_red7">#E74C3C</color>
+    <color name="flat_red8">#D73C2C</color>
+    <color name="flat_red9">#C72C1C</color>
+    <color name="flat_red10">#B71C0C</color>
+    <color name="flat_red11">#A70C00</color>
+    <color name="flat_red12">#870000</color>
+
+    <color name="flat_pink">#ff8d8d</color>
+    <color name="flat_pink2">#e66d58</color>
+
+    <color name="flat_grey1">#C5D3E2</color>
+    <color name="flat_grey2">#BCCAD9</color>
+    <color name="flat_grey3">#ACBAC9</color>
+    <color name="flat_grey4">#9CAAB9</color>
+    <color name="flat_grey5">#8C9AA9</color>
+    <color name="flat_grey6">#7C8A99</color>
+    <color name="flat_grey7">#7C8A89</color>
+    <color name="flat_grey8">#5C6A79</color>
+    <color name="flat_grey9">#4C5A69</color>
+    <color name="flat_grey10">#3C4A59</color>
+    <color name="flat_grey11">#2C3A49</color>
+    <color name="flat_grey12">#1C2A39</color>
+
+    <color name="flat_blue1">#39D5FF</color>
+    <color name="flat_blue2">#29C5FF</color>
+    <color name="flat_blue3">#19B5FE</color>
+    <color name="flat_blue4">#22A7F0</color>
+    <color name="flat_blue5">#1297E0</color>
+    <color name="flat_blue6">#0287D0</color>
+    <color name="flat_blue7">#0077C0</color>
+    <color name="flat_blue8">#0067B0</color>
+    <color name="flat_blue9">#0057A0</color>
+    <color name="flat_blue10">#004790</color>
+    <color name="flat_blue11">#003780</color>
+    <color name="flat_blue12">#102770</color>
+
+    <color name="logGreen">#18ffff</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="transparent_lynch_00">#006C7A89</color>
+    <color name="transparent_lynch_05">#056C7A89</color>
+    <color name="transparent_lynch_10">#106C7A89</color>
+    <color name="transparent_lynch_15">#156C7A89</color>
+    <color name="transparent_lynch_20">#206C7A89</color>
+    <color name="transparent_lynch_25">#256C7A89</color>
+    <color name="transparent_lynch_30">#306C7A89</color>
+    <color name="transparent_lynch_35">#356C7A89</color>
+    <color name="transparent_lynch_40">#406C7A89</color>
+    <color name="transparent_lynch_45">#456C7A89</color>
+    <color name="transparent_lynch_50">#506C7A89</color>
+    <color name="transparent_lynch_55">#556C7A89</color>
+    <color name="transparent_lynch_60">#606C7A89</color>
+    <color name="transparent_lynch_70">#706C7A89</color>
+    <color name="transparent_lynch_75">#756C7A89</color>
+    <color name="transparent_lynch_80">#806C7A89</color>
+    <color name="transparent_lynch_85">#856C7A89</color>
+    <color name="transparent_lynch_90">#906C7A89</color>
+    <color name="transparent_lynch_95">#956C7A89</color>
+
+    <color name="transparent_black_00">#00000000</color>
+    <color name="transparent_black_10">#10000000</color>
+    <color name="transparent_black_15">#15000000</color>
+    <color name="transparent_black_20">#20000000</color>
+    <color name="transparent_black_25">#25000000</color>
+    <color name="transparent_black_30">#30000000</color>
+    <color name="transparent_black_35">#35000000</color>
+    <color name="transparent_black_40">#40000000</color>
+    <color name="transparent_black_45">#45000000</color>
+    <color name="transparent_black_50">#50000000</color>
+    <color name="transparent_black_55">#55000000</color>
+    <color name="transparent_black_60">#60000000</color>
+    <color name="transparent_black_65">#65000000</color>
+    <color name="transparent_black_70">#70000000</color>
+    <color name="transparent_black_75">#75000000</color>
+    <color name="transparent_black_80">#80000000</color>
+    <color name="transparent_black_85">#85000000</color>
+    <color name="transparent_black_90">#90000000</color>
+    <color name="transparent_black_95">#95000000</color>
+
+    <color name="transparent_white_00">#00FFFFFF</color>
+    <color name="transparent_white_10">#10FFFFFF</color>
+    <color name="transparent_white_15">#15FFFFFF</color>
+    <color name="transparent_white_20">#20FFFFFF</color>
+    <color name="transparent_white_25">#25FFFFFF</color>
+    <color name="transparent_white_30">#30FFFFFF</color>
+    <color name="transparent_white_35">#35FFFFFF</color>
+    <color name="transparent_white_40">#40FFFFFF</color>
+    <color name="transparent_white_45">#45FFFFFF</color>
+    <color name="transparent_white_50">#50FFFFFF</color>
+    <color name="transparent_white_55">#55FFFFFF</color>
+    <color name="transparent_white_60">#60FFFFFF</color>
+    <color name="transparent_white_65">#65FFFFFF</color>
+    <color name="transparent_white_70">#70FFFFFF</color>
+    <color name="transparent_white_75">#75FFFFFF</color>
+    <color name="transparent_white_80">#80FFFFFF</color>
+    <color name="transparent_white_85">#85FFFFFF</color>
+    <color name="transparent_white_90">#90FFFFFF</color>
+    <color name="transparent_white_95">#95FFFFFF</color>
+
+    <color name="transparent_grey_10">#107f8c8d</color>
+    <color name="transparent_grey_15">#157f8c8d</color>
+    <color name="transparent_grey_20">#207f8c8d</color>
+    <color name="transparent_grey_25">#257f8c8d</color>
+    <color name="transparent_grey_30">#307f8c8d</color>
+    <color name="transparent_grey_35">#357f8c8d</color>
+    <color name="transparent_grey_40">#407f8c8d</color>
+    <color name="transparent_grey_45">#457f8c8d</color>
+    <color name="transparent_grey_50">#507f8c8d</color>
+    <color name="transparent_grey_55">#557f8c8d</color>
+    <color name="transparent_grey_60">#607f8c8d</color>
+    <color name="transparent_grey_65">#657f8c8d</color>
+    <color name="transparent_grey_70">#707f8c8d</color>
+    <color name="transparent_grey_75">#757f8c8d</color>
+    <color name="transparent_grey_80">#807f8c8d</color>
+    <color name="transparent_grey_85">#857f8c8d</color>
+    <color name="transparent_grey_90">#907f8c8d</color>
+    <color name="transparent_grey_95">#957f8c8d</color>
+
+    <color name="transparent_red_10">#10AB0800</color>
+    <color name="transparent_red_15">#15AB0800</color>
+    <color name="transparent_red_20">#20AB0800</color>
+    <color name="transparent_red_25">#25AB0800</color>
+    <color name="transparent_red_30">#30AB0800</color>
+    <color name="transparent_red_35">#35AB0800</color>
+    <color name="transparent_red_40">#40AB0800</color>
+    <color name="transparent_red_45">#45AB0800</color>
+    <color name="transparent_red_50">#50AB0800</color>
+    <color name="transparent_red_55">#55AB0800</color>
+    <color name="transparent_red_60">#60AB0800</color>
+    <color name="transparent_red_65">#65AB0800</color>
+    <color name="transparent_red_70">#70AB0800</color>
+    <color name="transparent_red_75">#75AB0800</color>
+    <color name="transparent_red_80">#80AB0800</color>
+    <color name="transparent_red_85">#85AB0800</color>
+    <color name="transparent_red_90">#90AB0800</color>
+    <color name="transparent_red_95">#95AB0800</color>
+
+    <color name="transparent_blue_10">#104183D7</color>
+    <color name="transparent_blue_15">#154183D7</color>
+    <color name="transparent_blue_20">#204183D7</color>
+    <color name="transparent_blue_25">#254183D7</color>
+    <color name="transparent_blue_30">#304183D7</color>
+    <color name="transparent_blue_35">#354183D7</color>
+    <color name="transparent_blue_40">#404183D7</color>
+    <color name="transparent_blue_45">#454183D7</color>
+    <color name="transparent_blue_50">#504183D7</color>
+    <color name="transparent_blue_55">#554183D7</color>
+    <color name="transparent_blue_60">#604183D7</color>
+    <color name="transparent_blue_65">#654183D7</color>
+    <color name="transparent_blue_70">#704183D7</color>
+    <color name="transparent_blue_75">#754183D7</color>
+    <color name="transparent_blue_80">#804183D7</color>
+    <color name="transparent_blue_85">#854183D7</color>
+    <color name="transparent_blue_90">#904183D7</color>
+    <color name="transparent_blue_95">#954183D7</color>
+
+    <color name="status_blocked">#962715</color>
+    <color name="status_unblocked">#3F681C</color>
+    <color name="status_deleted">#6C7A89</color>
+
+    <color name="transparent_dark_green2_50">#502a4f57</color>
+    <color name="transparent_dark_green2_10">#102a4f57</color>
+    <color name="transparent_dark_green2_30">#302a4f57</color>
 </resources>
