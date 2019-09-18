@@ -37,15 +37,12 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:' + rootProject.constraintLayoutVersion
     implementation 'com.android.support:recyclerview-v7:' + rootProject.supportLibVersion
     implementation 'android.arch.lifecycle:extensions:' + rootProject.archLifecycleVersion
-    implementation 'android.arch.persistence.room:runtime:' + rootProject.archRoomVersion
     implementation 'com.airbnb.android:lottie:' + rootProject.lottieVersion
-    implementation 'com.android.volley:volley:' + rootProject.volleyVersion
+    implementation 'com.google.code.gson:gson:' + rootProject.gsonVersion
+    implementation 'com.squareup.retrofit2:retrofit:' + rootProject.retrofitVersion
+    implementation 'com.squareup.retrofit2:converter-gson:' + rootProject.retrofitVersion
 
     annotationProcessor 'android.arch.lifecycle:compiler:' + rootProject.archLifecycleVersion
-    annotationProcessor 'android.arch.persistence.room:compiler:' + rootProject.archRoomVersion
-    annotationProcessor 'android.arch.persistence.room:rxjava2:' + rootProject.archRoomVersion
-    annotationProcessor 'android.arch.persistence.room:guava:' + rootProject.archRoomVersion
-    annotationProcessor 'android.arch.persistence.room:testing:' + rootProject.archRoomVersion
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:' + rootProject.runnerVersion
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:' + rootProject.espressoVersion
