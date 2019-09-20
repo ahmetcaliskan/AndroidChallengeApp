@@ -13,6 +13,8 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.c.a.androidchallengeapp.R;
 import com.c.a.androidchallengeapp.databinding.FragmentOrdersBinding;
@@ -26,6 +28,8 @@ public class FragmentOrders extends Fragment {
     private ViewModelOrders viewModel;
     private Observer<List<ModelOrders>> observer;
     private FragmentOrdersBinding binding;
+    private SwipeRefreshLayout sRLOrders;
+    private RecyclerView rcvOrders;
 
     public static FragmentOrders newInstance() {
         return new FragmentOrders();
@@ -37,9 +41,13 @@ public class FragmentOrders extends Fragment {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_orders, container, false);
         View view = binding.getRoot();
 
-        if (getActivity() != null) {
+        if (getActivity() != null)
             activity = (AppCompatActivity) getActivity();
-        }
+
+        showToolbar();
+
+        sRLOrders = binding.sRLOrders;
+        rcvOrders = binding.rcvOrders;
 
         viewModel = ViewModelProviders.of(this).get(ViewModelOrders.class);
         startObserve(viewModel.getOrders());
@@ -57,5 +65,10 @@ public class FragmentOrders extends Fragment {
             }
         };
         mediatorLiveData.observe(this, observer);
+    }
+
+    private void showToolbar() {
+        if (getActivity() != null)
+            ((AppCompatActivity) getActivity()).getSupportActionBar().show();
     }
 }
