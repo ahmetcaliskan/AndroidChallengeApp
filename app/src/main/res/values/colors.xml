@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#181820</color>
+    <color name="colorPrimaryDark">#181820</color>
+    <color name="colorAccent">#b85007</color>
 
     <color name="flat_bluewood">#34495E</color>
     <color name="flat_hoki">#67809F</color>
@@ -245,6 +245,10 @@
     <color name="flat_my_darkpurple5">#352853</color>
     <color name="flat_my_turquise1">#63d4c2</color>
     <color name="flat_my_pink1">#ff598f</color>
+
+    <color name="flat_my_grey">#c8cccf</color>
+    <color name="flat_my_grey1">#d1d5d8</color>
+    <color name="flat_my_pumpkin_orange">#b85007</color>
 
     <color name="flat_orange1">#FDE3A7</color>
     <color name="flat_orange2">#FFCF4B</color>

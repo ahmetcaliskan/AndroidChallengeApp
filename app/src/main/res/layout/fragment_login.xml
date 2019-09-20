@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="typeFont"
+            type="com.c.a.androidchallengeapp.types.TypeFont" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/flat_my_grey"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/ac_16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/ac_16dp"
+            android:paddingLeft="@dimen/ac_16dp"
+            android:paddingEnd="@dimen/ac_16dp"
+            android:paddingRight="@dimen/ac_16dp">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="@dimen/ac_200dp"
+                android:layout_height="@dimen/ac_200dp"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/ic_logo" />
+
+            <EditText
+                android:id="@+id/etUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ac_32dp"
+                android:drawableStart="@drawable/ic_user"
+                android:drawablePadding="@dimen/ac_8dp"
+                android:hint="Kullanıcı adı"
+                android:maxLength="12"
+                android:textColor="@color/flat_my_dark"
+                android:textColorHint="@color/flat_my_dark2"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/ac_12sp"
+                app:setFont="@{typeFont.DEFAULT}" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ac_2dp"
+                android:drawableStart="@drawable/ic_password"
+                android:drawablePadding="@dimen/ac_8dp"
+                android:hint="Şifre"
+                android:inputType="textPassword"
+                android:maxLength="12"
+                android:textColor="@color/flat_my_dark"
+                android:textColorHint="@color/flat_my_dark2"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/ac_12sp"
+                app:setFont="@{typeFont.DEFAULT}" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/ac_12dp"
+                android:text="Beni Hatırla"
+                android:textSize="@dimen/ac_11dp"
+                app:setFont="@{typeFont.DEFAULT}" />
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="@dimen/ac_12dp"-->
+            <!--                android:orientation="horizontal">-->
+
+            <!--                <Switch-->
+            <!--                    android:id="@+id/switchRememberMe"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_gravity="left|start"-->
+            <!--                    android:layout_marginEnd="@dimen/ac_8dp"-->
+            <!--                    android:drawablePadding="@dimen/ac_12dp"-->
+            <!--                    android:textSize="@dimen/ac_11dp"-->
+            <!--                    app:setFont="@{typeFont.DEFAULT}" />-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/tvConnectionDetails"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_gravity="center_vertical|end"-->
+            <!--                    android:text="*Beni Hatırla"-->
+            <!--                    android:textColor="@color/flat_my_dark"-->
+            <!--                    android:textSize="@dimen/ac_12sp"-->
+            <!--                    app:setFont="@{typeFont.DEFAULT}" />-->
+
+            <!--            </LinearLayout>-->
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ac_24dp"
+                android:background="@drawable/border_login_button"
+                android:paddingStart="@dimen/ac_48dp"
+                android:paddingTop="@dimen/ac_8dp"
+                android:paddingEnd="@dimen/ac_48dp"
+                android:paddingBottom="@dimen/ac_8dp"
+                android:text="*Giriş"
+                android:textColor="@color/flat_my_dark"
+                android:textSize="@dimen/ac_11sp"
+                app:setFont="@{typeFont.DEFAULT_BOLD}" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>
