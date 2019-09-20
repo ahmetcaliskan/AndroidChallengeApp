@@ -1,4 +1,4 @@
-package utility.databinding;
+package com.c.a.androidchallengeapp.utility.databinding;
 
 import android.graphics.Typeface;
 import android.view.View;

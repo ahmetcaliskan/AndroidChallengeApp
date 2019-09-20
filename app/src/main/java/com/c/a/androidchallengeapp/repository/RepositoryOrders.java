@@ -1,14 +1,14 @@
-package repository;
+package com.c.a.androidchallengeapp.repository;
 
 import androidx.annotation.Nullable;
 import androidx.lifecycle.MutableLiveData;
 
 import com.c.a.androidchallengeapp.model.ModelOrders;
+import com.c.a.androidchallengeapp.retrofit.ApiOrders;
+import com.c.a.androidchallengeapp.retrofit.RetrofitInstance;
 
 import java.util.List;
 
-import retrofit.ApiOrders;
-import retrofit.RetrofitInstance;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

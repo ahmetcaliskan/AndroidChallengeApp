@@ -7,10 +7,9 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
 
 import com.c.a.androidchallengeapp.model.ModelOrders;
+import com.c.a.androidchallengeapp.repository.RepositoryOrders;
 
 import java.util.List;
-
-import repository.RepositoryOrders;
 
 public class ViewModelOrders extends AndroidViewModel {
     private MutableLiveData<List<ModelOrders>> listOrders;
