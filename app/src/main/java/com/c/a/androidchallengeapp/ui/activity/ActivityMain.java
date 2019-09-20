@@ -12,6 +12,7 @@ import com.c.a.androidchallengeapp.R;
 import com.c.a.androidchallengeapp.constants.ConstantApp;
 import com.c.a.androidchallengeapp.databinding.ActivityMainBinding;
 import com.c.a.androidchallengeapp.ui.fragment.FragmentLogin;
+import com.c.a.androidchallengeapp.ui.fragment.FragmentOrders;
 import com.c.a.androidchallengeapp.utility.UtilSharedPreferences;
 
 public class ActivityMain extends AppCompatActivity {
@@ -28,7 +29,7 @@ public class ActivityMain extends AppCompatActivity {
         if (!isRememberMe) {
             navigateFragment(FragmentLogin.newInstance());
         } else {
-
+            navigateFragment(FragmentOrders.newInstance());
         }
 
     }

@@ -18,6 +18,5 @@
         android:right="@dimen/ac_8dp"
         android:top="@dimen/ac_4dp" />
 
-    <solid android:color="@color/flat_my_pumpkin_orange" />
 
 </shape>
