@@ -7,29 +7,38 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.c.a.androidchallengeapp.R;
+import com.c.a.androidchallengeapp.constants.ConstantApp;
 import com.c.a.androidchallengeapp.databinding.FragmentOrdersBinding;
 import com.c.a.androidchallengeapp.model.ModelOrders;
+import com.c.a.androidchallengeapp.ui.adapter.AdapterOrders;
+import com.c.a.androidchallengeapp.utility.UtilSharedPreferences;
 import com.c.a.androidchallengeapp.viewmodel.ViewModelOrders;
 
 import java.util.List;
+import java.util.Objects;
 
-public class FragmentOrders extends Fragment {
+public class FragmentOrders extends Fragment implements View.OnClickListener {
     private AppCompatActivity activity;
+    private MutableLiveData<List<ModelOrders>> mutableLiveData;
     private ViewModelOrders viewModel;
     private Observer<List<ModelOrders>> observer;
     private FragmentOrdersBinding binding;
     private SwipeRefreshLayout sRLOrders;
     private RecyclerView rcvOrders;
+    private AdapterOrders adapter;
 
     public static FragmentOrders newInstance() {
         return new FragmentOrders();
@@ -49,26 +58,80 @@ public class FragmentOrders extends Fragment {
         sRLOrders = binding.sRLOrders;
         rcvOrders = binding.rcvOrders;
 
+        adapter = new AdapterOrders();
+
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getActivity().getApplicationContext(), DividerItemDecoration.VERTICAL);
+        rcvOrders.setLayoutManager(new LinearLayoutManager(getActivity()));
+        rcvOrders.setHasFixedSize(true);
+        rcvOrders.setAdapter(adapter);
+        rcvOrders.addItemDecoration(dividerItemDecoration);
+
         viewModel = ViewModelProviders.of(this).get(ViewModelOrders.class);
+
+        binding.sRLOrders.setOnRefreshListener(() -> {
+            if (getActivity() != null)
+                getActivity().runOnUiThread(() -> {
+                    removeObserve();
+                    startObserve(viewModel.getOrders());
+                    binding.sRLOrders.setRefreshing(false);
+                });
+        });
+
+        binding.btnOrders.setOnClickListener(this);
+        binding.btnLogout.setOnClickListener(this);
+
         startObserve(viewModel.getOrders());
 
         return view;
     }
 
-    private void startObserve(MutableLiveData<List<ModelOrders>> mediatorLiveData) {
-        observer = new Observer<List<ModelOrders>>() {
-            @Override
-            public void onChanged(List<ModelOrders> list) {
-                if (list != null) {
-
-                }
+    private void startObserve(MutableLiveData<List<ModelOrders>> mld) {
+        observer = list -> {
+            if (list != null) {
+                adapter.submitList(list);
+                adapter.notifyDataSetChanged();
             }
         };
-        mediatorLiveData.observe(this, observer);
+        mld.observe(this, observer);
+        mutableLiveData = mld;
+    }
+
+    private void removeObserve() {
+        if (mutableLiveData.hasObservers())
+            mutableLiveData.removeObservers(this);
     }
 
     private void showToolbar() {
         if (getActivity() != null)
             ((AppCompatActivity) getActivity()).getSupportActionBar().show();
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btnOrders:
+                removeObserve();
+                startObserve(viewModel.getOrders());
+                break;
+
+            case R.id.btnLogout:
+                showDialog("Marketim", "Çıkış yapmak istediğinize emin misiniz?");
+                break;
+        }
+    }
+
+    private void showDialog(String title, String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Objects.requireNonNull(getActivity()));
+        builder.setTitle(title);
+        builder.setMessage(message);
+        builder.setPositiveButton("Çıkış yap", (dialogInterface, i) -> {
+            if (getActivity() != null) {
+                UtilSharedPreferences.putData(ConstantApp.SP_KEY_IS_REMEMBER_ME, false, getContext());
+                getActivity().finishAffinity();
+            }
+        });
+
+        builder.setNegativeButton("İptal", (dialog, which) -> dialog.dismiss());
+        builder.show();
     }
 }

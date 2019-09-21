@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="modelOrders"
+            type="com.c.a.androidchallengeapp.model.ModelOrders" />
+
+        <variable
+            name="typeFont"
+            type="com.c.a.androidchallengeapp.types.TypeFont" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/llBase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/flat_my_grey"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/ac_8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/ac_8dp"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/ac_16dp"
+            android:paddingEnd="@dimen/ac_16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.20"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@{modelOrders.date}"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/ac_32sp"
+                    app:setFont="@{typeFont.DEFAULT_BOLD}" />
+
+                <TextView
+                    android:id="@+id/tvMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/ac_12sp"
+                    app:setFont="@{typeFont.DEFAULT}"
+                    app:setTextConvertMonthName="@{modelOrders.month}" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/ac_2dp"
+                android:layout_height="@dimen/ac_32dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/ac_16dp"
+                android:layout_marginEnd="@dimen/ac_16dp"
+                android:background="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvMarketName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/ac_2dp"
+                    android:drawableEnd="@drawable/ic_right_arrow"
+                    android:text="@{modelOrders.marketName}"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/ac_11sp"
+                    app:setFont="@{typeFont.DEFAULT}" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/ac_2dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvOrderName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@{modelOrders.orderName}"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/ac_11sp"
+                        app:setFont="@{typeFont.DEFAULT}" />
+
+                    <TextView
+                        android:id="@+id/tvProductPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/ac_2dp"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@{Double.toString(modelOrders.productPrice) + ` TL`}"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/ac_11sp"
+                        app:setFont="@{typeFont.DEFAULT_BOLD}" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvProductState"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/ac_2dp"
+                    android:drawablePadding="@dimen/ac_16dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/ac_11sp"
+                    app:setFont="@{typeFont.DEFAULT}"
+                    app:setTextColorByState="@{modelOrders.productState}" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/expandableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ael_duration="500"
+            app:ael_expanded="true"
+            app:ael_interpolator="linear">
+
+            <LinearLayout
+                android:id="@+id/llProductDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/flat_grey"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/ac_16dp"
+                android:paddingTop="@dimen/ac_8dp"
+                android:paddingEnd="@dimen/ac_16dp"
+                android:paddingBottom="@dimen/ac_8dp">
+
+                <TextView
+                    android:id="@+id/tvOrderDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@{modelOrders.modelProductDetail.orderDetail}"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/ac_12sp"
+                    app:setFont="@{typeFont.DEFAULT}" />
+
+                <TextView
+                    android:id="@+id/tvSummaryPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@{Double.toString(modelOrders.modelProductDetail.summaryPrice) + ` TL`}"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/ac_12sp"
+                    app:setFont="@{typeFont.DEFAULT_BOLD}" />
+
+            </LinearLayout>
+        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+    </LinearLayout>
+
+</layout>
