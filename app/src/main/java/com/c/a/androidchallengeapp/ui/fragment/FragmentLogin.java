@@ -1,6 +1,5 @@
 package com.c.a.androidchallengeapp.ui.fragment;
 
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -20,6 +19,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.c.a.androidchallengeapp.R;
 import com.c.a.androidchallengeapp.constants.ConstantApp;
 import com.c.a.androidchallengeapp.databinding.FragmentLoginBinding;
+import com.c.a.androidchallengeapp.utility.UtilSharedPreferences;
 
 import java.util.Objects;
 
@@ -72,6 +72,8 @@ public class FragmentLogin extends Fragment implements View.OnClickListener {
     private void login() {
         if (isValid())
             if (auth()) {
+                UtilSharedPreferences.putData(ConstantApp.SP_KEY_IS_REMEMBER_ME, binding.cbRememberMe.isChecked(),
+                        getContext());
                 navigateFragment(FragmentOrders.newInstance());
             } else {
                 showDialog("Marketim", "Kullanıcı Adı veya Şifre hatalı");
@@ -105,12 +107,7 @@ public class FragmentLogin extends Fragment implements View.OnClickListener {
         AlertDialog.Builder builder = new AlertDialog.Builder(Objects.requireNonNull(getActivity()));
         builder.setTitle(title);
         builder.setMessage(message);
-        builder.setPositiveButton("Tamam", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                dialogInterface.dismiss();
-            }
-        });
+        builder.setPositiveButton("Tamam", (dialogInterface, i) -> dialogInterface.dismiss());
         builder.show();
     }
 
