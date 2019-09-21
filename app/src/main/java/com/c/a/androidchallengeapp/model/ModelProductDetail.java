@@ -12,7 +12,7 @@ public class ModelProductDetail {
     public ModelProductDetail() {
     }
 
-    public ModelProductDetail(String orderDetail, int summaryPrice) {
+    public ModelProductDetail(String orderDetail, double summaryPrice) {
         this.orderDetail = orderDetail;
         this.summaryPrice = summaryPrice;
     }
@@ -30,10 +30,6 @@ public class ModelProductDetail {
     }
 
     public void setSummaryPrice(double summaryPrice) {
-        this.summaryPrice = summaryPrice;
-    }
-
-    public void setSummaryPrice(int summaryPrice) {
         this.summaryPrice = summaryPrice;
     }
 }
