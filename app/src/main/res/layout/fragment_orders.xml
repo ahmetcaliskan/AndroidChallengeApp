@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -15,7 +16,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="@color/flat_my_grey"
-        android:paddingTop="16dp"
         android:paddingBottom="@dimen/ac_16dp">
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -26,6 +26,7 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rcvOrders"
+                tools:listitem="@layout/item_recv_orders"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
@@ -34,8 +35,8 @@
             android:id="@+id/llBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ac_8dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="@dimen/ac_16dp"
             android:orientation="horizontal"
             android:paddingStart="@dimen/ac_16dp"
             android:paddingEnd="@dimen/ac_16dp">
