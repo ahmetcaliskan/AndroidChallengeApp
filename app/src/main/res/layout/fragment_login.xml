@@ -48,6 +48,7 @@
                 android:textColorHint="@color/flat_my_dark2"
                 android:textCursorDrawable="@null"
                 android:textSize="@dimen/ac_12sp"
+                android:text="kariyer"
                 app:setFont="@{typeFont.DEFAULT}" />
 
             <EditText
@@ -62,11 +63,13 @@
                 android:maxLength="12"
                 android:textColor="@color/flat_my_dark"
                 android:textColorHint="@color/flat_my_dark2"
+                android:text="2019ADev"
                 android:textCursorDrawable="@null"
                 android:textSize="@dimen/ac_12sp"
                 app:setFont="@{typeFont.DEFAULT}" />
 
             <CheckBox
+                android:id="@+id/cbRememberMe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
@@ -108,7 +111,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/ac_24dp"
-                android:background="@drawable/border_login_button"
+                android:background="@drawable/shape_rect_orange_solid"
                 android:paddingStart="@dimen/ac_48dp"
                 android:paddingTop="@dimen/ac_8dp"
                 android:paddingEnd="@dimen/ac_48dp"
