@@ -43,4 +43,14 @@ public class ActivityMain extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 
+    @Override
+    public void onBackPressed() {//geri tuşu ile uygulamadan çıkış yapması için. Aksi durumda uygulamada sadece boş ekran gözükür
+        int count = getSupportFragmentManager().getBackStackEntryCount();
+//        if (count == 1) {
+        finishAffinity();
+//        } else {
+//            getSupportFragmentManager().popBackStack();
+//        }
+    }
+
 }
