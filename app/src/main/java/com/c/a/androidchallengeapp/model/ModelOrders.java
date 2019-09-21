@@ -24,11 +24,13 @@ public class ModelOrders {
     @SerializedName("productDetail")
     private ModelProductDetail modelProductDetail;
 
+    private boolean isExpand;//Recylerview'de, scroll anında expandable view'in son halini korumak için
+
     public ModelOrders() {
     }
 
-    public ModelOrders(String date, String month, String marketName, String orderName, int productPrice,
-                       String productState, ModelProductDetail modelProductDetail) {
+    public ModelOrders(String date, String month, String marketName, String orderName, double productPrice,
+                       String productState, ModelProductDetail modelProductDetail, boolean isExpand) {
         this.date = date;
         this.month = month;
         this.marketName = marketName;
@@ -36,6 +38,7 @@ public class ModelOrders {
         this.productPrice = productPrice;
         this.productState = productState;
         this.modelProductDetail = modelProductDetail;
+        this.isExpand = isExpand;
     }
 
     public String getDate() {
@@ -74,7 +77,7 @@ public class ModelOrders {
         return productPrice;
     }
 
-    public void setProductPrice(int productPrice) {
+    public void setProductPrice(double productPrice) {
         this.productPrice = productPrice;
     }
 
@@ -92,5 +95,13 @@ public class ModelOrders {
 
     public void setModelProductDetail(ModelProductDetail modelProductDetail) {
         this.modelProductDetail = modelProductDetail;
+    }
+
+    public boolean isExpand() {
+        return isExpand;
+    }
+
+    public void setExpand(boolean expand) {
+        isExpand = expand;
     }
 }
