@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="typeFont"
+            type="com.c.a.androidchallengeapp.types.TypeFont" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieAnimationView"
+                android:layout_width="@dimen/ac_72dp"
+                android:layout_height="@dimen/ac_72dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/ac_8dp"
+                android:layout_marginEnd="@dimen/ac_8dp"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:scaleType="centerCrop"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true" />
+
+            <TextView
+                android:id="@+id/tvMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lottieAnimationView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/ac_16dp"
+                android:layout_marginTop="@dimen/ac_4dp"
+                android:layout_marginEnd="@dimen/ac_16dp"
+                android:layout_marginBottom="@dimen/ac_8dp"
+                android:textColor="@color/flat_white_smoke"
+                app:setFont="@{typeFont.DEFAULT}" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/ac_8dp"
+                android:layout_marginBottom="@dimen/ac_8dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="İptal"
+                android:textColor="@color/colorAccent"
+                app:setFont="@{typeFont.DEFAULT}" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>
