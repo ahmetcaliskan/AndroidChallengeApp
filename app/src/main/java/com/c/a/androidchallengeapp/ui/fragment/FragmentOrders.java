@@ -148,6 +148,8 @@ public class FragmentOrders extends Fragment implements View.OnClickListener {
         int animRawId = getContext().getResources().getIdentifier("loader", "raw", getContext().getPackageName());//json anim dosyası (lottie için)
         customProgressDialog = new CustomProgressDialog(activity, animRawId,
                 getString(R.string.pleaseWaiting), false, () -> customProgressDialog.hide());
-        customProgressDialog.show();
+
+        if (isAdded())
+            customProgressDialog.show();
     }
 }
