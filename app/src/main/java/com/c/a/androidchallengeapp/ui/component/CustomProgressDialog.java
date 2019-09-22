@@ -58,10 +58,11 @@ public class CustomProgressDialog extends Dialog implements View.OnClickListener
         binding = DataBindingUtil.inflate(LayoutInflater.from(getContext()), R.layout.custom_progress_dialog, null, false);
         setContentView(binding.getRoot());
 
-        if (cancelable) {
-            binding.btnCancel.setOnClickListener(this);
+        binding.btnCancel.setOnClickListener(this);
+
+        if (cancelable)
             binding.btnCancel.setVisibility(View.GONE);
-        }
+
         binding.lottieAnimationView.setAnimation(rawResId);
         binding.tvMessage.setText(message);
 
