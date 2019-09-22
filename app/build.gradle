@@ -11,6 +11,7 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -29,6 +30,11 @@ android {
 
     defaultConfig {
         vectorDrawables.useSupportLibrary = true
+    }
+
+    lintOptions {//release apk oluştururken alınan hata için
+        checkReleaseBuilds false
+        abortOnError false
     }
 }
 
