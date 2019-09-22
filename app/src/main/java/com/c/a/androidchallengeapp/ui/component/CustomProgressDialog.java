@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.Window;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 
 import com.c.a.androidchallengeapp.R;
@@ -28,22 +27,6 @@ public class CustomProgressDialog extends Dialog implements View.OnClickListener
         this.rawResId = rawResId;
         this.message = message;
         this.cancelable = cancelable;
-        this.listener = listener;
-    }
-
-    public CustomProgressDialog(@NonNull Context context, int themeResId, int rawResId, String message, boolean cancelable, CustomListener listener) {
-        super(context, themeResId);
-        this.rawResId = rawResId;
-        this.message = message;
-        this.cancelable = cancelable;
-        this.listener = listener;
-    }
-
-    protected CustomProgressDialog(@NonNull Context context, boolean cancelable, int rawResId, @Nullable OnCancelListener cancelListener, String message, boolean cancelable1, CustomListener listener) {
-        super(context, cancelable, cancelListener);
-        this.rawResId = rawResId;
-        this.message = message;
-        this.cancelable = cancelable1;
         this.listener = listener;
     }
 

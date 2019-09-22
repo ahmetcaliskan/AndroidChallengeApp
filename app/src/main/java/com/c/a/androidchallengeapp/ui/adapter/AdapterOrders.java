@@ -44,7 +44,7 @@ public class AdapterOrders extends ListAdapter<ModelOrders, AdapterOrders.ViewHo
 
             itemView.setOnClickListener(v -> {
                 ModelOrders modelOrders = getItem(getAdapterPosition());
-                modelOrders.setExpand(!modelOrders.isExpand());//expand ise collapse yap, collapse expand yap
+                modelOrders.setExpand(!modelOrders.isExpand());//expand ise collapse yap, collapse ise expand yap
                 binding.setVariable(com.c.a.androidchallengeapp.BR.modelOrders, modelOrders);//güncelle
                 binding.executePendingBindings();
             });

@@ -10,19 +10,16 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.c.a.androidchallengeapp.R;
 import com.c.a.androidchallengeapp.constants.ConstantApp;
-import com.c.a.androidchallengeapp.databinding.ActivityMainBinding;
 import com.c.a.androidchallengeapp.ui.fragment.FragmentLogin;
 import com.c.a.androidchallengeapp.ui.fragment.FragmentOrders;
 import com.c.a.androidchallengeapp.utility.UtilSharedPreferences;
 
 public class ActivityMain extends AppCompatActivity {
 
-    private ActivityMainBinding binding;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        DataBindingUtil.setContentView(this, R.layout.activity_main);
 
         boolean isRememberMe = UtilSharedPreferences.getBoolean(ConstantApp.SP_KEY_IS_REMEMBER_ME, getApplicationContext());//default false
 

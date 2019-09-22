@@ -18,7 +18,6 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.c.a.androidchallengeapp.R;
 import com.c.a.androidchallengeapp.constants.ConstantApp;
@@ -38,7 +37,6 @@ public class FragmentOrders extends Fragment implements View.OnClickListener {
     private ViewModelOrders viewModel;
     private Observer<List<ModelOrders>> observer;
     private FragmentOrdersBinding binding;
-    private SwipeRefreshLayout sRLOrders;
     private RecyclerView rcvOrders;
     private AdapterOrders adapter;
 
@@ -61,7 +59,6 @@ public class FragmentOrders extends Fragment implements View.OnClickListener {
 
         showToolbar();
 
-        sRLOrders = binding.sRLOrders;
         rcvOrders = binding.rcvOrders;
 
         adapter = new AdapterOrders();
@@ -148,11 +145,9 @@ public class FragmentOrders extends Fragment implements View.OnClickListener {
     }
 
     private void showProgressDialog() {
-        int animRawId = getContext().getResources().getIdentifier("loader", "raw", getContext().getPackageName());
+        int animRawId = getContext().getResources().getIdentifier("loader", "raw", getContext().getPackageName());//json anim dosyası (lottie için)
         customProgressDialog = new CustomProgressDialog(activity, animRawId,
-                getString(R.string.pleaseWaiting), false, () -> {
-            customProgressDialog.hide();
-        });
+                getString(R.string.pleaseWaiting), false, () -> customProgressDialog.hide());
         customProgressDialog.show();
     }
 }

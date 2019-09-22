@@ -172,52 +172,5 @@
                 app:setFont="@{typeFont.DEFAULT_BOLD}" />
 
         </LinearLayout>
-
-        <!--        <com.github.aakira.expandablelayout.ExpandableRelativeLayout-->
-        <!--            android:id="@+id/expandableLayout"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            app:ael_duration="200"-->
-        <!--            app:ael_expanded="true"-->
-        <!--            app:ael_interpolator="linear">-->
-
-        <!--            <LinearLayout-->
-        <!--                android:id="@+id/llProductDetail"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:background="@color/flat_my_grey1"-->
-        <!--                android:orientation="horizontal"-->
-        <!--                android:paddingStart="@dimen/ac_16dp"-->
-        <!--                android:paddingTop="@dimen/ac_8dp"-->
-        <!--                android:paddingEnd="@dimen/ac_16dp"-->
-        <!--                android:paddingBottom="@dimen/ac_8dp">-->
-
-        <!--                <TextView-->
-        <!--                    android:id="@+id/tvOrderDetail"-->
-        <!--                    android:layout_width="0dp"-->
-        <!--                    android:layout_height="wrap_content"-->
-        <!--                    android:layout_gravity="center"-->
-        <!--                    android:layout_weight="1"-->
-        <!--                    android:text="@{modelOrders.modelProductDetail.orderDetail}"-->
-        <!--                    android:textColor="@color/colorPrimary"-->
-        <!--                    android:textSize="@dimen/ac_12sp"-->
-        <!--                    app:setFont="@{typeFont.DEFAULT}" />-->
-
-        <!--                <TextView-->
-        <!--                    android:id="@+id/tvSummaryPrice"-->
-        <!--                    android:layout_width="0dp"-->
-        <!--                    android:layout_height="wrap_content"-->
-        <!--                    android:layout_gravity="center"-->
-        <!--                    android:layout_weight="1"-->
-        <!--                    android:gravity="end"-->
-        <!--                    android:text="@{Double.toString(modelOrders.modelProductDetail.summaryPrice) + ` TL`}"-->
-        <!--                    android:textColor="@color/colorPrimary"-->
-        <!--                    android:textSize="@dimen/ac_12sp"-->
-        <!--                    app:setFont="@{typeFont.DEFAULT_BOLD}" />-->
-
-        <!--            </LinearLayout>-->
-        <!--        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>-->
-
     </LinearLayout>
-
 </layout>

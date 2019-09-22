@@ -319,8 +319,6 @@
     <color name="flat_blue11">#003780</color>
     <color name="flat_blue12">#102770</color>
 
-    <color name="logGreen">#18ffff</color>
-
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
 
@@ -440,10 +438,6 @@
     <color name="transparent_blue_85">#854183D7</color>
     <color name="transparent_blue_90">#904183D7</color>
     <color name="transparent_blue_95">#954183D7</color>
-
-    <color name="status_blocked">#962715</color>
-    <color name="status_unblocked">#3F681C</color>
-    <color name="status_deleted">#6C7A89</color>
 
     <color name="transparent_dark_green2_50">#502a4f57</color>
     <color name="transparent_dark_green2_10">#102a4f57</color>
