@@ -50,21 +50,21 @@ public class UtilBindingAdapter {
     public static void setTextColorByState(TextView tv, String state) {
         switch (state) {
             case TypeProductState.PREPARING:
-                tv.setText("*Hazırlanıyor");
+                tv.setText(tv.getContext().getString(R.string.productStatePreparing));
                 tv.setTextColor(ContextCompat.getColor(tv.getContext(), R.color.flat_my_sunset));
                 tv.setCompoundDrawablesWithIntrinsicBounds(ContextCompat.getDrawable(tv.getContext(),
                         R.drawable.ic_square_state_preparing),
                         null, null, null);
                 break;
             case TypeProductState.PENDING_APPROVAL:
-                tv.setText("Onay Bekliyor");
+                tv.setText(tv.getContext().getString(R.string.productStatePending));
                 tv.setTextColor(ContextCompat.getColor(tv.getContext(), R.color.flat_my_brick_red));
                 tv.setCompoundDrawablesWithIntrinsicBounds(ContextCompat.getDrawable(tv.getContext(),
                         R.drawable.ic_square_state_pending),
                         null, null, null);
                 break;
             case TypeProductState.SENT:
-                tv.setText("Yolda");
+                tv.setText(tv.getContext().getString(R.string.productStateSent));
                 tv.setTextColor(ContextCompat.getColor(tv.getContext(), R.color.flat_my_grass));
                 tv.setCompoundDrawablesWithIntrinsicBounds(ContextCompat.getDrawable(tv.getContext(),
                         R.drawable.ic_square_state_sent),
@@ -77,7 +77,7 @@ public class UtilBindingAdapter {
 
     @BindingAdapter({"setTextConvertMonthName"})
     public static void setTextConvertMonthName(TextView tv, String month) {
-        tv.setText(UtilDate.convertMonthName(month));
+        tv.setText(UtilDate.convertMonthName(tv.getContext(), month));
     }
 }
 
