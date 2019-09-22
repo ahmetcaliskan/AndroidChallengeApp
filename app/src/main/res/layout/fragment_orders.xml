@@ -20,7 +20,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/flat_my_grey"
+        android:background="@color/flat_white_smoke"
         android:orientation="vertical"
         android:paddingBottom="@dimen/ac_16dp">
 
