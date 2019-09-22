@@ -1,3 +1,42 @@
 <resources>
-    <string name="app_name">AndroidChallengeApp</string>
+    <string name="appName">Marketim</string>
+
+    <string name="ok">Tamam</string>
+    <string name="cancel">İptal</string>
+
+    <string name="login">"Giriş"</string>
+    <string name="logout">"Çıkış Yap"</string>
+    <string name="loginValidWarning">"Kullanıcı Adı veya Şifre Hatalı"</string>
+    <string name="loginUserNameWarning">"Lütfen kullanıcı adını giriniz"</string>
+    <string name="loginPasswordWarning">"Lütfen şifreyi giriniz"</string>
+    <string name="userName">"Kullanıcı Adı"</string>
+    <string name="password">"Şifre"</string>
+    <string name="rememberMe">"Beni hatırla"</string>
+
+    <string name="confirmLogout">"Çıkış yapmak istediğinize emin misiniz ?"</string>
+    <string name="pleaseWaiting">"Lütfen bekleyiniz…"</string>
+
+    <string name="orders">"Siparişlerim"</string>
+    <string name="failOrdersList">"Sipariş bilgisi getirilemedi"</string>
+    <string name="emptyOrdersList">"Sipariş bulunamadı"</string>
+
+    <string name="productStatePreparing">"Siparişiniz hazırlanıyor"</string>
+    <string name="productStatePending">"Onay bekliyor"</string>
+    <string name="productStateSent">"Sipariş yolda"</string>
+
+    <string-array name="months">
+        <item>Ocak</item>
+        <item>Şubat</item>
+        <item>Mart</item>
+        <item>Nisan</item>
+        <item>Mayıs</item>
+        <item>Haziran</item>
+        <item>Temmuz</item>
+        <item>Ağustos</item>
+        <item>Eylül</item>
+        <item>Ekim</item>
+        <item>Kasım</item>
+        <item>Aralık</item>
+    </string-array>
+
 </resources>

@@ -53,10 +53,8 @@ public class FragmentLogin extends Fragment implements View.OnClickListener {
 
     private void navigateFragment(Fragment fragment) {
         FragmentManager fragmentManager = activity.getSupportFragmentManager();
-        fragmentManager.popBackStack();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.rlFragmentArea, fragment);
-        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
 
@@ -76,7 +74,7 @@ public class FragmentLogin extends Fragment implements View.OnClickListener {
                         getContext());
                 navigateFragment(FragmentOrders.newInstance());
             } else {
-                showDialog("Marketim", "Kullanıcı Adı veya Şifre hatalı");
+                showAlertDialog(getString(R.string.appName), getString(R.string.loginValidWarning));
             }
     }
 
@@ -84,12 +82,12 @@ public class FragmentLogin extends Fragment implements View.OnClickListener {
         boolean isEmpty = true;
 
         if (TextUtils.isEmpty(etUserName.getText())) {
-            etUserName.setError("Lütfen kullanıcı adını giriniz");
+            etUserName.setError(getString(R.string.loginUserNameWarning));
             isEmpty = false;
         }
 
         if (TextUtils.isEmpty(etPassword.getText())) {
-            etPassword.setError("Lütfen şifreyi giriniz");
+            etPassword.setError(getString(R.string.loginPasswordWarning));
             isEmpty = false;
         }
 
@@ -103,11 +101,11 @@ public class FragmentLogin extends Fragment implements View.OnClickListener {
         return userName.equals(ConstantApp.DEFAULT_USER_NAME) && password.equals(ConstantApp.DEFAULT_PASSWORD);
     }
 
-    private void showDialog(String title, String message) {
+    private void showAlertDialog(String title, String message) {
         AlertDialog.Builder builder = new AlertDialog.Builder(Objects.requireNonNull(getActivity()));
         builder.setTitle(title);
         builder.setMessage(message);
-        builder.setPositiveButton("Tamam", (dialogInterface, i) -> dialogInterface.dismiss());
+        builder.setPositiveButton(getString(R.string.ok), (dialogInterface, i) -> dialogInterface.dismiss());
         builder.show();
     }
 

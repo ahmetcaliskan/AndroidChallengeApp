@@ -63,7 +63,7 @@
                 android:layout_marginEnd="@dimen/ac_8dp"
                 android:layout_marginBottom="@dimen/ac_8dp"
                 android:background="?android:attr/selectableItemBackground"
-                android:text="İptal"
+                android:text="@string/cancel"
                 android:textColor="@color/colorAccent"
                 app:setFont="@{typeFont.DEFAULT}" />
         </RelativeLayout>

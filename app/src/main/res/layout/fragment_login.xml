@@ -42,13 +42,13 @@
                 android:layout_marginTop="@dimen/ac_32dp"
                 android:drawableStart="@drawable/ic_user"
                 android:drawablePadding="@dimen/ac_8dp"
-                android:hint="Kullanıcı adı"
+                android:hint="@string/userName"
                 android:maxLength="12"
+                android:text="kariyer"
                 android:textColor="@color/flat_my_dark"
                 android:textColorHint="@color/flat_my_dark2"
                 android:textCursorDrawable="@null"
                 android:textSize="@dimen/ac_12sp"
-                android:text="kariyer"
                 app:setFont="@{typeFont.DEFAULT}" />
 
             <EditText
@@ -58,12 +58,12 @@
                 android:layout_marginTop="@dimen/ac_2dp"
                 android:drawableStart="@drawable/ic_password"
                 android:drawablePadding="@dimen/ac_8dp"
-                android:hint="Şifre"
+                android:hint="@string/password"
                 android:inputType="textPassword"
                 android:maxLength="12"
+                android:text="2019ADev"
                 android:textColor="@color/flat_my_dark"
                 android:textColorHint="@color/flat_my_dark2"
-                android:text="2019ADev"
                 android:textCursorDrawable="@null"
                 android:textSize="@dimen/ac_12sp"
                 app:setFont="@{typeFont.DEFAULT}" />
@@ -74,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginTop="@dimen/ac_12dp"
-                android:text="Beni Hatırla"
+                android:text="@string/rememberMe"
                 android:textSize="@dimen/ac_11dp"
                 app:setFont="@{typeFont.DEFAULT}" />
 
@@ -116,7 +116,7 @@
                 android:paddingTop="@dimen/ac_8dp"
                 android:paddingEnd="@dimen/ac_48dp"
                 android:paddingBottom="@dimen/ac_8dp"
-                android:text="*Giriş"
+                android:text="@string/login"
                 android:textColor="@color/flat_my_dark"
                 android:textSize="@dimen/ac_11sp"
                 app:setFont="@{typeFont.DEFAULT_BOLD}" />

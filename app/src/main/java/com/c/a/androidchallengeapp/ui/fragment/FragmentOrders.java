@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -72,12 +73,13 @@ public class FragmentOrders extends Fragment implements View.OnClickListener {
         rcvOrders.addItemDecoration(dividerItemDecoration);
 
         viewModel = ViewModelProviders.of(this).get(ViewModelOrders.class);
+        binding.setViewModel(viewModel);
 
         binding.sRLOrders.setOnRefreshListener(() -> {
             if (getActivity() != null)
                 getActivity().runOnUiThread(() -> {
                     showProgressDialog();
-                    removeObserve();
+                    removeObserver();
                     startObserve(viewModel.getOrders());
                     binding.sRLOrders.setRefreshing(false);
                 });
@@ -93,17 +95,19 @@ public class FragmentOrders extends Fragment implements View.OnClickListener {
 
     private void startObserve(MutableLiveData<List<ModelOrders>> mld) {
         observer = list -> {
+            customProgressDialog.hide();
             if (list != null) {
                 adapter.submitList(list);
                 adapter.notifyDataSetChanged();
-                customProgressDialog.hide();
+            } else {
+                Toast.makeText(activity, getString(R.string.failOrdersList), Toast.LENGTH_SHORT).show();
             }
         };
         mld.observe(this, observer);
         mutableLiveData = mld;
     }
 
-    private void removeObserve() {
+    private void removeObserver() {
         if (mutableLiveData.hasObservers())
             mutableLiveData.removeObservers(this);
     }
@@ -118,12 +122,12 @@ public class FragmentOrders extends Fragment implements View.OnClickListener {
         switch (view.getId()) {
             case R.id.btnOrders:
                 showProgressDialog();
-                removeObserve();
+                removeObserver();
                 startObserve(viewModel.getOrders());
                 break;
 
             case R.id.btnLogout:
-                showAlertDialog("Marketim", "Çıkış yapmak istediğinize emin misiniz?");
+                showAlertDialog(getString(R.string.appName), getString(R.string.confirmLogout));
                 break;
         }
     }
@@ -132,21 +136,22 @@ public class FragmentOrders extends Fragment implements View.OnClickListener {
         AlertDialog.Builder builder = new AlertDialog.Builder(Objects.requireNonNull(getActivity()));
         builder.setTitle(title);
         builder.setMessage(message);
-        builder.setPositiveButton("Çıkış yap", (dialogInterface, i) -> {
+        builder.setPositiveButton(getString(R.string.logout), (dialogInterface, i) -> {
             if (getActivity() != null) {
                 UtilSharedPreferences.putData(ConstantApp.SP_KEY_IS_REMEMBER_ME, false, getContext());
                 getActivity().finishAffinity();
             }
         });
 
-        builder.setNegativeButton("İptal", (dialog, which) -> dialog.dismiss());
+        builder.setNegativeButton(getString(R.string.cancel), (dialog, which) -> dialog.dismiss());
         builder.show();
     }
 
     private void showProgressDialog() {
         int animRawId = getContext().getResources().getIdentifier("loader", "raw", getContext().getPackageName());
         customProgressDialog = new CustomProgressDialog(activity, animRawId,
-                "Lütfen bekleyiniz", false, () -> {//cancelable false olduğu için listener önemli değil
+                getString(R.string.pleaseWaiting), false, () -> {
+            customProgressDialog.hide();
         });
         customProgressDialog.show();
     }

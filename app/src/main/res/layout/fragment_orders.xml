@@ -5,38 +5,61 @@
 
     <data>
 
+        <import type="android.view.View" />
+
         <variable
             name="typeFont"
             type="com.c.a.androidchallengeapp.types.TypeFont" />
+
+        <variable
+            name="viewModel"
+            type="com.c.a.androidchallengeapp.viewmodel.ViewModelOrders" />
 
     </data>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:background="@color/flat_my_grey"
+        android:orientation="vertical"
         android:paddingBottom="@dimen/ac_16dp">
 
-        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-            android:id="@+id/sRLOrders"
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@+id/llBtn">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rcvOrders"
-                tools:listitem="@layout/item_recv_orders"
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/sRLOrders"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcvOrders"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="@{viewModel.listOrders.empty ? View.GONE : View.VISIBLE}"
+                    tools:listitem="@layout/item_recv_orders" />
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            <TextView
+                android:id="@+id/tvEmpty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/emptyOrdersList"
+                android:textColor="@color/flat_lynch"
+                android:visibility="@{viewModel.listOrders.empty ? View.VISIBLE : View.GONE}"
+                app:setFont="@{typeFont.DEFAULT}" />
+
+        </FrameLayout>
 
         <LinearLayout
             android:id="@+id/llBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/ac_8dp"
             android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/ac_8dp"
             android:orientation="horizontal"
             android:paddingStart="@dimen/ac_16dp"
             android:paddingEnd="@dimen/ac_16dp">
@@ -52,7 +75,7 @@
                 android:paddingTop="@dimen/ac_8dp"
                 android:paddingEnd="@dimen/ac_16dp"
                 android:paddingBottom="@dimen/ac_8dp"
-                android:text="*Siparişlerim"
+                android:text="@string/orders"
                 android:textColor="@color/flat_my_dark"
                 android:textSize="@dimen/ac_11sp"
                 app:setFont="@{typeFont.DEFAULT_BOLD}" />
@@ -67,7 +90,7 @@
                 android:paddingTop="@dimen/ac_8dp"
                 android:paddingEnd="@dimen/ac_48dp"
                 android:paddingBottom="@dimen/ac_8dp"
-                android:text="*Çıkış"
+                android:text="@string/logout"
                 android:textColor="@color/flat_my_dark"
                 android:textSize="@dimen/ac_11sp"
                 app:setFont="@{typeFont.DEFAULT_BOLD}" />
