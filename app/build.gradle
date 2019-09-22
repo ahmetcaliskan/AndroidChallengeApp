@@ -41,10 +41,10 @@ dependencies {
     implementation 'com.android.support:design:' + rootProject.supportLibVersion
     implementation 'com.android.support.constraint:constraint-layout:' + rootProject.constraintLayoutVersion
     implementation 'com.android.support:recyclerview-v7:' + rootProject.supportLibVersion
-    implementation 'android.arch.lifecycle:extensions:' + rootProject.archLifecycleVersion
-    implementation 'com.airbnb.android:lottie:' + rootProject.lottieVersion
-    implementation 'com.google.code.gson:gson:' + rootProject.gsonVersion
-    implementation 'com.squareup.retrofit2:retrofit:' + rootProject.retrofitVersion
+    implementation 'android.arch.lifecycle:extensions:' + rootProject.archLifecycleVersion //livedata, viewmodel kullanımı için
+    implementation 'com.airbnb.android:lottie:' + rootProject.lottieVersion //json dosyası ile animasyon kullanımı için
+    implementation 'com.google.code.gson:gson:' + rootProject.gsonVersion //json parse için
+    implementation 'com.squareup.retrofit2:retrofit:' + rootProject.retrofitVersion //restApi kullanımı için
     implementation 'com.squareup.retrofit2:converter-gson:' + rootProject.retrofitVersion
 
     annotationProcessor 'android.arch.lifecycle:compiler:' + rootProject.archLifecycleVersion
