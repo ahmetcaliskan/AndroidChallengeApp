@@ -4,7 +4,6 @@ import androidx.annotation.Nullable;
 import androidx.lifecycle.MutableLiveData;
 
 import com.c.a.androidchallengeapp.model.ModelOrders;
-import com.c.a.androidchallengeapp.model.ModelProductDetail;
 import com.c.a.androidchallengeapp.retrofit.ApiOrders;
 import com.c.a.androidchallengeapp.retrofit.RetrofitInstance;
 
@@ -30,12 +29,6 @@ public class RepositoryOrders {
             @Override
             public void onResponse(@Nullable Call<List<ModelOrders>> call, @Nullable Response<List<ModelOrders>> response) {
                 if (response != null && response.isSuccessful()) {
-                    for (int i = 0; i < 20; i++) {
-                        ModelOrders modelOrders = new ModelOrders("12", "03", "maasasad", "adsdsadsadsa", 50.0, "Yolda",
-                                new ModelProductDetail("detailsadsadsadsa", 12.5), false);
-                        response.body().add(modelOrders);
-
-                    }
                     orders.setValue(response.body());
                 }
             }

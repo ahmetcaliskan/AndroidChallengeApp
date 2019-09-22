@@ -29,18 +29,10 @@ public class AdapterOrders extends ListAdapter<ModelOrders, AdapterOrders.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-        ModelOrders modelOrders = getItem(i);
+    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
+        ModelOrders modelOrders = getItem(position);
         viewHolder.binding.setVariable(com.c.a.androidchallengeapp.BR.modelOrders, modelOrders);
         viewHolder.binding.executePendingBindings();
-
-//        if (modelOrders.isExpand()) {//scroll anında son durumu korumak için
-//            viewHolder.binding.expandableLayout.expand();
-//            modelOrders.setExpand(true);
-//        } else {
-//            viewHolder.binding.expandableLayout.collapse();
-//            modelOrders.setExpand(false);
-//        }
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
@@ -51,30 +43,29 @@ public class AdapterOrders extends ListAdapter<ModelOrders, AdapterOrders.ViewHo
             binding = DataBindingUtil.bind(itemView);
 
             itemView.setOnClickListener(v -> {
-                binding.expandableLayout.toggle();
-//                ModelOrders modelOrders = getItem(getAdapterPosition());
-//                if (modelOrders.isExpand()) {
-//                    binding.expandableLayout.collapse();
-//                    modelOrders.setExpand(false);
-//                } else {
-//                    binding.expandableLayout.expand();
-//                    modelOrders.setExpand(true);
-//                }
+                ModelOrders modelOrders = getItem(getAdapterPosition());
+                modelOrders.setExpand(!modelOrders.isExpand());//expand ise collapse yap, collapse expand yap
+                binding.setVariable(com.c.a.androidchallengeapp.BR.modelOrders, modelOrders);//güncelle
+                binding.executePendingBindings();
             });
         }
     }
 
-    private static final DiffUtil.ItemCallback<ModelOrders> DIFF_CALLBACK = new DiffUtil.ItemCallback<ModelOrders>() {
+    private static final DiffUtil.ItemCallback<ModelOrders> DIFF_CALLBACK = new DiffUtil.ItemCallback<ModelOrders>() {//içerik değiştiği zaman güncellenecek. Listeler arası fark kontol ediliyor
         @Override
-        public boolean areItemsTheSame(ModelOrders oldItem, ModelOrders newItem) {
+        public boolean areItemsTheSame(ModelOrders oldItem, ModelOrders newItem) {//Her siparişin unique kod bilgisi bulunmadığı için, market, sipariş adları ve tarih aynı ise aynı item olarak varsayıldı.
             return oldItem.getOrderName().equals(newItem.getOrderName()) &&
-                    oldItem.getMarketName().equals(newItem.getMarketName());
+                    oldItem.getMarketName().equals(newItem.getMarketName()) &&
+                    oldItem.getDate().equals(newItem.getDate()) &&
+                    oldItem.getMonth().equals(newItem.getMonth());
         }
 
         @Override
         public boolean areContentsTheSame(ModelOrders oldItem, ModelOrders newItem) {
             return oldItem.getOrderName().equals(newItem.getOrderName()) &&
-                    oldItem.getMarketName().equals(newItem.getMarketName());
+                    oldItem.getMarketName().equals(newItem.getMarketName()) &&
+                    oldItem.getDate().equals(newItem.getDate()) &&
+                    oldItem.getMonth().equals(newItem.getMonth());
         }
     };
 }

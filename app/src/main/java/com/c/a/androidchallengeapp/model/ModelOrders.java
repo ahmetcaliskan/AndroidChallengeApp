@@ -24,7 +24,7 @@ public class ModelOrders {
     @SerializedName("productDetail")
     private ModelProductDetail modelProductDetail;
 
-    private boolean isExpand;//Recylerview'de, scroll anında expandable view'in son halini korumak için
+    private boolean isExpand;//Recylerview'de, scroll anında expandable state'ini korumak için
 
     public ModelOrders() {
     }
