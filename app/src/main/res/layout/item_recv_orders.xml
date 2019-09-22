@@ -81,7 +81,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/ac_2dp"
-                    android:drawableEnd="@drawable/ic_right_arrow"
+                    android:drawableEnd="@drawable/ic_right_arrow_wrap"
                     android:text="@{modelOrders.marketName}"
                     android:textColor="@color/colorPrimary"
                     android:textSize="@dimen/ac_11sp"
